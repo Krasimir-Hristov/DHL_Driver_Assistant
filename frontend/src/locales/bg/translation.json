@@ -3,5 +3,6 @@
   "title": "DHL Driver Assistant",
   "login": "Вход",
   "register": "Регистрация",
-  "welcome": "Добре дошли в помощника за шофьори на DHL"
+  "welcome": "Добре дошли в помощника за шофьори на DHL",
+  "dayOfYear": "Ден от годината"
 }

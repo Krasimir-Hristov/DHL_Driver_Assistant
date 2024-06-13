@@ -3,5 +3,6 @@
   "title": "DHL Driver Assistant",
   "login": "Σύνδεση",
   "register": "Εγγραφή",
-  "welcome": "Καλώς ήρθατε στον Βοηθό Οδηγών της DHL"
+  "welcome": "Καλώς ήρθατε στον Βοηθό Οδηγών της DHL",
+  "dayOfYear": "Ημέρα του έτους"
 }

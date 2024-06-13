@@ -3,5 +3,6 @@
   "title": "DHL Driver Assistant",
   "login": "Giriş Yap",
   "register": "Kayit Ol",
-  "welcome": "DHL Sürücü Asistanina Hoş Geldiniz"
+  "welcome": "DHL Sürücü Asistanina Hoş Geldiniz",
+  "dayOfYear": "Yilin günü"
 }

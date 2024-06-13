@@ -3,5 +3,6 @@
   "title": "DHL Driver Assistant",
   "login": "Login",
   "register": "Register",
-  "welcome": "Welcome to DHL Driver App"
+  "welcome": "Welcome to DHL Driver App",
+  "dayOfYear": "Day of the year"
 }

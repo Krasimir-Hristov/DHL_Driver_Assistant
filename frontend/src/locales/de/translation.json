@@ -3,5 +3,6 @@
   "title": "DHL Driver Assistant",
   "login": "Anmelden",
   "register": "Registrieren",
-  "welcome": "Willkommen beim DHL Fahrer-Assistenten"
+  "welcome": "Willkommen beim DHL Fahrer-Assistenten",
+  "dayOfYear": "Tag des Jahres"
 }

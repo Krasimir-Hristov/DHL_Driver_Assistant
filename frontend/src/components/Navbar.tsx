@@ -12,68 +12,72 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className='bg-yellow-500 h-full min-h-10 p-4'>
-      <div className='container mx-auto flex justify-between items-center'>
-        <Link to='/' className='text-red-700 text-4xl font-bold'>
+      <div className='container mx-auto flex flex-col md:flex-row justify-between items-center'>
+        <Link to='/' className='text-red-700 text-4xl font-bold mb-4 md:mb-0'>
           <div className='flex gap-5'>
             <p>{t('title')}</p>
             <p className='text-black font-bold '>{t('indicator')}</p>
           </div>
         </Link>
-        <div>
-          <button
-            onClick={() => changeLanguage('en')}
-            className='text-black hover:text-white mx-2'
-          >
-            <FlagIcon code='GB' size={24} />
-          </button>
-          <button
-            onClick={() => changeLanguage('bg')}
-            className='text-black hover:text-white mx-2'
-          >
-            <FlagIcon code='BG' size={24} />
-          </button>
-          <button
-            onClick={() => changeLanguage('ro')}
-            className='text-black hover:text-white mx-2'
-          >
-            <FlagIcon code='RO' size={24} />
-          </button>
-          <button
-            onClick={() => changeLanguage('de')}
-            className='text-black hover:text-white mx-2'
-          >
-            <FlagIcon code='DE' size={24} />
-          </button>
-          <button
-            onClick={() => changeLanguage('al')}
-            className='text-black hover:text-white mx-2'
-          >
-            <FlagIcon code='AL' size={24} />
-          </button>
-          <button
-            onClick={() => changeLanguage('gr')}
-            className='text-black hover:text-white mx-2'
-          >
-            <FlagIcon code='GR' size={24} />
-          </button>
-          <button
-            onClick={() => changeLanguage('it')}
-            className='text-black hover:text-white mx-2'
-          >
-            <FlagIcon code='IT' size={24} />
-          </button>
-          <button
-            onClick={() => changeLanguage('tr')}
-            className='text-black hover:text-white mx-2'
-          >
-            <FlagIcon code='TR' size={24} />
-          </button>
-          <Link to='/login' className='text-black hover:text-white mx-2'>
-            {t('login')}
-          </Link>
-          <Link to='/register' className='text-black hover:text-white mx-2'>
-            {t('register')}
-          </Link>
+        <div className='flex flex-col md:flex-row'>
+          <div className='flex flex-wrap justify-center md:justify-start mb-4 md:mb-0'>
+            <button
+              onClick={() => changeLanguage('en')}
+              className='text-black hover:text-white mx-2'
+            >
+              <FlagIcon code='GB' size={24} />
+            </button>
+            <button
+              onClick={() => changeLanguage('bg')}
+              className='text-black hover:text-white mx-2'
+            >
+              <FlagIcon code='BG' size={24} />
+            </button>
+            <button
+              onClick={() => changeLanguage('ro')}
+              className='text-black hover:text-white mx-2'
+            >
+              <FlagIcon code='RO' size={24} />
+            </button>
+            <button
+              onClick={() => changeLanguage('de')}
+              className='text-black hover:text-white mx-2'
+            >
+              <FlagIcon code='DE' size={24} />
+            </button>
+            <button
+              onClick={() => changeLanguage('al')}
+              className='text-black hover:text-white mx-2'
+            >
+              <FlagIcon code='AL' size={24} />
+            </button>
+            <button
+              onClick={() => changeLanguage('gr')}
+              className='text-black hover:text-white mx-2'
+            >
+              <FlagIcon code='GR' size={24} />
+            </button>
+            <button
+              onClick={() => changeLanguage('it')}
+              className='text-black hover:text-white mx-2'
+            >
+              <FlagIcon code='IT' size={24} />
+            </button>
+            <button
+              onClick={() => changeLanguage('tr')}
+              className='text-black hover:text-white mx-2'
+            >
+              <FlagIcon code='TR' size={24} />
+            </button>
+          </div>
+          <div className='flex justify-center md:justify-start'>
+            <Link to='/login' className='text-black hover:text-white mx-2'>
+              {t('login')}
+            </Link>
+            <Link to='/register' className='text-black hover:text-white mx-2'>
+              {t('register')}
+            </Link>
+          </div>
         </div>
       </div>
     </nav>

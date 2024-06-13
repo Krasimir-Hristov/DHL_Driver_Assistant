@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className='bg-yellow-500 h-full min-h-10 p-4'>
+    <nav className='bg-yellow-500 p-2 md:p-4'>
       <div className='container mx-auto flex flex-col md:flex-row justify-between items-center'>
         <Link to='/' className='text-red-700 text-4xl font-bold mb-4 md:mb-0'>
           <div className='flex gap-5'>

@@ -1,0 +1,19 @@
+1. Add the current date in the Home page, mayeby with new component.
+
+2. Change the wellcome message in the home page to change dynamic acourd the selected language.
+
+3. Show the driver lists ( dates ) you need to have in your driver book (from (date) to (date))
+
+4. Connect the app in MongoDB database
+
+5. Create the Register functionality
+
+6. Create the Login functionality
+
+7. Create the posability to manipulate the calendar coloring it with diferent colors
+
+8. Show on the calendar the work off days dynamicly
+
+9. Count the Exactly days of work, days off, and days of sickeness, in the last 12 months.
+
+.....

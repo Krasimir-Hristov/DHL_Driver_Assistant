@@ -3,10 +3,10 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import en from './locales/en/translation.json';
 import bg from './locales/bg/translation.json';
-import el from './locales/el/translation.json';
+import gr from './locales/gr/translation.json';
 import it from './locales/it/translation.json';
 import ro from './locales/ro/translation.json';
-import sq from './locales/sq/translation.json';
+import al from './locales/al/translation.json';
 import tr from './locales/tr/translation.json';
 import de from './locales/de/translation.json';
 
@@ -18,8 +18,8 @@ i18n.use(initReactI18next).init({
     bg: {
       translation: bg,
     },
-    el: {
-      translation: el,
+    gr: {
+      translation: gr,
     },
     it: {
       translation: it,
@@ -27,8 +27,8 @@ i18n.use(initReactI18next).init({
     ro: {
       translation: ro,
     },
-    sq: {
-      translation: sq,
+    al: {
+      translation: al,
     },
     tr: {
       translation: tr,

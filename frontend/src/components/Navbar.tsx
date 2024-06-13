@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FlagIcon } from 'react-flag-kit';
 import { useTranslation } from 'react-i18next';
 
 const Navbar: React.FC = () => {
@@ -10,7 +11,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className='bg-yellow-500 p-4'>
+    <nav className='bg-yellow-500 h-full min-h-10 p-4'>
       <div className='container mx-auto flex justify-between items-center'>
         <Link to='/' className='text-red-700 text-4xl font-bold'>
           <div className='flex gap-5'>
@@ -23,13 +24,49 @@ const Navbar: React.FC = () => {
             onClick={() => changeLanguage('en')}
             className='text-black hover:text-white mx-2'
           >
-            EN
+            <FlagIcon code='GB' size={24} />
           </button>
           <button
             onClick={() => changeLanguage('bg')}
             className='text-black hover:text-white mx-2'
           >
-            BG
+            <FlagIcon code='BG' size={24} />
+          </button>
+          <button
+            onClick={() => changeLanguage('ro')}
+            className='text-black hover:text-white mx-2'
+          >
+            <FlagIcon code='RO' size={24} />
+          </button>
+          <button
+            onClick={() => changeLanguage('de')}
+            className='text-black hover:text-white mx-2'
+          >
+            <FlagIcon code='DE' size={24} />
+          </button>
+          <button
+            onClick={() => changeLanguage('al')}
+            className='text-black hover:text-white mx-2'
+          >
+            <FlagIcon code='AL' size={24} />
+          </button>
+          <button
+            onClick={() => changeLanguage('gr')}
+            className='text-black hover:text-white mx-2'
+          >
+            <FlagIcon code='GR' size={24} />
+          </button>
+          <button
+            onClick={() => changeLanguage('it')}
+            className='text-black hover:text-white mx-2'
+          >
+            <FlagIcon code='IT' size={24} />
+          </button>
+          <button
+            onClick={() => changeLanguage('tr')}
+            className='text-black hover:text-white mx-2'
+          >
+            <FlagIcon code='TR' size={24} />
           </button>
           <Link to='/login' className='text-black hover:text-white mx-2'>
             {t('login')}

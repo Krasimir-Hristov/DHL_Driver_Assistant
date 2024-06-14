@@ -13,8 +13,8 @@ const CurrentDate: React.FC = () => {
 
   return (
     <div className='text-2xl'>
-      <span>{t('currentDate')}:</span>{' '}
-      <span className='font-bold'>{dateString}</span>
+      <span className='font-semibold'>{t('currentDate')}:</span>{' '}
+      <span className='font-extrabold'>{dateString}</span>
     </div>
   );
 };

@@ -10,7 +10,7 @@ const DateRange: React.FC = () => {
 
   return (
     <div className='text-2xl mt-5 flex flex-col'>
-      <span className='font-semibold'>You need to have the dates</span>
+      <span className='font-semibold'>You need to have this dates</span>
       <span>
         {formatDate(twentyEightDaysAgo)} - {formatDate(now)}
       </span>

@@ -5,5 +5,6 @@
   "register": "Kayit Ol",
   "welcome": "DHL Sürücü Asistanina Hoş Geldiniz",
   "dayOfYear": "Yilin günü",
-  "currentDate": "Mevcut tarih"
+  "currentDate": "Mevcut tarih",
+  "datesNeeded": "Bu tarihlere ihtiyaciniz var"
 }

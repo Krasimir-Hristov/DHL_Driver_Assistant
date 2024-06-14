@@ -2,6 +2,7 @@ import React from 'react';
 import DayOfYear from '../components/DayOfYear';
 import CurrentDate from '../components/CurrentDate';
 import { useTranslation } from 'react-i18next';
+import DateRange from '../components/DateRange';
 
 const Home: React.FC = () => {
   const { t } = useTranslation();
@@ -12,6 +13,7 @@ const Home: React.FC = () => {
       </h1>
       <DayOfYear />
       <CurrentDate />
+      <DateRange />
     </div>
   );
 };

@@ -3,7 +3,7 @@
   "title": "DHL Driver Assistant",
   "login": "Login",
   "register": "Register",
-  "welcome": "Welcome to DHL Driver App",
+  "controlBookInfo": "Updated information for the control book",
   "dayOfYear": "Day of the year",
   "currentDate": "Current date",
   "datesNeeded": "You need these dates"

@@ -9,7 +9,7 @@ const Home: React.FC = () => {
   return (
     <div className='flex flex-col items-center justify-center min-h-screen text-center px-4 pt-12 md:pt-0 bg-slate-200'>
       <h1 className='text-3xl md:text-4xl lg:text-6xl mb-8 font-bold'>
-        {t('welcome')}
+        {t('controlBookInfo')}
       </h1>
       <DayOfYear />
       <CurrentDate />

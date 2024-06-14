@@ -3,7 +3,7 @@
   "title": "DHL Sürücü Asistani",
   "login": "Giriş Yap",
   "register": "Kayit Ol",
-  "welcome": "DHL Sürücü Asistanina Hoş Geldiniz",
+  "controlBookInfo": "Kontrol defteri için güncel bilgiler",
   "dayOfYear": "Yilin günü",
   "currentDate": "Mevcut tarih",
   "datesNeeded": "Bu tarihlere ihtiyaciniz var"

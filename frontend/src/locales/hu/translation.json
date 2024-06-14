@@ -3,7 +3,7 @@
   "title": "DHL Vezető Asszisztens",
   "login": "Bejelentkezés",
   "register": "Regisztráció",
-  "welcome": "Üdvözöljük a DHL vezetői asszisztensében",
+  "controlBookInfo": "Aktuális információk az ellenőrző könyvről",
   "dayOfYear": "Az év napja",
   "currentDate": "Aktuális dátum",
   "datesNeeded": "Szükséged van ezekre a dátumokra"

@@ -1,10 +1,10 @@
-1. Add hungarian language
+<!-- 1. Add hungarian language -->
 
-2. Add the current date in the Home page, mayeby with new component.
+<!-- 2. Add the current date in the Home page, mayeby with new component. -->
 
-3. Change the wellcome message in the home page to change dynamic acourd the selected language.
+<!-- 3. Change the wellcome message in the home page to change dynamic acourd the selected language. -->
 
-4. Show the driver lists ( dates ) you need to have in your driver book (from (date) to (date))
+<!-- 4. Show the driver lists ( dates ) you need to have in your driver book (from (date) to (date)) -->
 
 5. Connect the app in MongoDB database
 

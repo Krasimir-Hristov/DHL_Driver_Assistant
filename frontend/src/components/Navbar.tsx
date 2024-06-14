@@ -75,6 +75,12 @@ const Navbar: React.FC = () => {
             >
               <FlagIcon code='RS' size={24} />
             </button>
+            <button
+              onClick={() => changeLanguage('hu')}
+              className='text-black hover:text-white mx-2'
+            >
+              <FlagIcon code='HU' size={24} />
+            </button>
           </div>
           <div className='flex justify-center md:justify-start'>
             <Link to='/login' className='text-black hover:text-white mx-2'>

@@ -10,6 +10,7 @@ import al from './locales/al/translation.json';
 import tr from './locales/tr/translation.json';
 import de from './locales/de/translation.json';
 import ru from './locales/ru/translation.json';
+import hu from './locales/hu/translation.json';
 
 i18n.use(initReactI18next).init({
   resources: {
@@ -39,6 +40,9 @@ i18n.use(initReactI18next).init({
     },
     ru: {
       translation: ru,
+    },
+    hu: {
+      translation: hu,
     },
   },
   lng: 'de', // start language

@@ -1,5 +1,3 @@
-// src/components/DayOfYear.tsx
-
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -13,8 +11,8 @@ const DayOfYear: React.FC = () => {
   const day = Math.floor(diff / oneDay);
 
   return (
-    <div>
-      {t('dayOfYear')}: {day}
+    <div className='text-2xl'>
+      <span>{t('dayOfYear')}:</span> <span className='font-bold'>{day}</span>
     </div>
   );
 };

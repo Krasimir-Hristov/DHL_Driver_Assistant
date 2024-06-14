@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
         <Link to='/' className='text-red-700 text-4xl font-bold mb-4 md:mb-0'>
           <div className='flex gap-5'>
             <p>{t('title')}</p>
-            <p className='text-black font-bold '>{t('indicator')}</p>
+            <p className='text-black font-extrabold '>{t('indicator')}</p>
           </div>
         </Link>
         <div className='flex flex-col md:flex-row'>
@@ -83,10 +83,16 @@ const Navbar: React.FC = () => {
             </button>
           </div>
           <div className='flex justify-center md:justify-start mt-8 md:mt-0'>
-            <Link to='/login' className='text-black hover:text-white mx-2'>
+            <Link
+              to='/login'
+              className='text-black hover:text-white mx-2 font-bold'
+            >
               {t('login')}
             </Link>
-            <Link to='/register' className='text-black hover:text-white mx-2'>
+            <Link
+              to='/register'
+              className='text-black hover:text-white mx-2 font-bold'
+            >
               {t('register')}
             </Link>
           </div>

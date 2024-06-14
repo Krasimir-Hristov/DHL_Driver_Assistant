@@ -4,5 +4,6 @@
   "login": "Anmelden",
   "register": "Registrieren",
   "welcome": "Willkommen beim DHL Fahrer-Assistenten",
-  "dayOfYear": "Tag des Jahres"
+  "dayOfYear": "Tag des Jahres",
+  "currentDate": "Aktuelles Datum"
 }

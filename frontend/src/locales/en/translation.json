@@ -4,5 +4,6 @@
   "login": "Login",
   "register": "Register",
   "welcome": "Welcome to DHL Driver App",
-  "dayOfYear": "Day of the year"
+  "dayOfYear": "Day of the year",
+  "currentDate": "Current date"
 }

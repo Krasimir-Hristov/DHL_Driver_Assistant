@@ -4,5 +4,6 @@
   "login": "Bejelentkezés",
   "register": "Regisztráció",
   "welcome": "Üdvözöljük a DHL vezetői asszisztensében",
-  "dayOfYear": "Az év napja"
+  "dayOfYear": "Az év napja",
+  "currentDate": "Aktuális dátum"
 }

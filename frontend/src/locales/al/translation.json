@@ -4,5 +4,6 @@
   "login": "Hyrje",
   "register": "Regjistrim",
   "welcome": "Mirë se vini në Asistentin e Shoferëve DHL",
-  "dayOfYear": "Dita e vitit"
+  "dayOfYear": "Dita e vitit",
+  "currentDate": "Data aktuale"
 }

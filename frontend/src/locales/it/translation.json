@@ -4,5 +4,6 @@
   "login": "Accesso",
   "register": "Registrazione",
   "welcome": "Benvenuto nell'Assistente per autisti DHL",
-  "dayOfYear": "Giorno dell'anno"
+  "dayOfYear": "Giorno dell'anno",
+  "currentDate": "Data corrente"
 }

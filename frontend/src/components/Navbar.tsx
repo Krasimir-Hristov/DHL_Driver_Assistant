@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className='bg-yellow-500 p-2 md:p-4'>
+    <nav className='fixed w-full top-0 bg-yellow-500 p-2 md:p-4 z-50'>
       <div className='container mx-auto flex flex-col md:flex-row justify-between items-center'>
         <Link to='/' className='text-red-700 text-4xl font-bold mb-4 md:mb-0'>
           <div className='flex gap-5'>
@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
           </div>
         </Link>
         <div className='flex flex-col md:flex-row'>
-          <div className='flex flex-wrap justify-center md:justify-start mb-4 md:mb-0'>
+          <div className='flex flex-nowrap justify-center md:justify-start'>
             <button
               onClick={() => changeLanguage('en')}
               className='text-black hover:text-white mx-2'
@@ -82,7 +82,7 @@ const Navbar: React.FC = () => {
               <FlagIcon code='HU' size={24} />
             </button>
           </div>
-          <div className='flex justify-center md:justify-start'>
+          <div className='flex justify-center md:justify-start mt-8 md:mt-0'>
             <Link to='/login' className='text-black hover:text-white mx-2'>
               {t('login')}
             </Link>

@@ -1,35 +1,11 @@
-<!-- 1. Add hungarian language -->
+1. fix the Type issue in WeekkleCalendar component
 
-<!-- 2. Add the current date in the Home page, mayeby with new component. -->
+2. add all the languages in the calendar
 
-<!-- 3. Change the wellcome message in the home page to change dynamic acourd the selected language. -->
+3. add the input field for the group of the employee
 
-<!-- 4. Show the driver lists ( dates ) you need to have in your driver book (from (date) to (date)) -->
+4. style the WeeklyCalendar component
 
-5. Connect the app in MongoDB database
-
-6. Create the Register functionality
-
-7. Create the Login functionality
-
-8. Create the posability to manipulate the calendar coloring it with diferent colors
-
-9. Show on the calendar the work off days dynamicly
-
-10. Count the Exactly days of work, days off, and days of sickeness, in the last 12 months.
+5. check for bugs if it some
 
 .....
-
-<!-- The 9 weaks with they daysoff -->
-
-const cycle = [
-{ week: 1, daysOff: [6] }, // Week 1 - Saturday
-{ week: 2, daysOff: [1, 2] }, // Week 2 - Monday, Tuesday
-{ week: 3, daysOff: [3] }, // Week 3 - Wednesday
-{ week: 4, daysOff: [1] }, // Week 4 - Monday
-{ week: 5, daysOff: [4] }, // Week 5 - Thursday
-{ week: 6, daysOff: [5, 6] }, // Week 6 - Friday, Saturday
-{ week: 7, daysOff: [1] }, // Week 7 - Monday
-{ week: 8, daysOff: [6] }, // Week 8 - Saturday
-{ week: 9, daysOff: [1] }, // Week 9 - Monday
-];

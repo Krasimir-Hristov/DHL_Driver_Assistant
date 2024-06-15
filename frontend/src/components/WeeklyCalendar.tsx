@@ -14,7 +14,7 @@ import { weekOffDays } from '../constants/index';
 
 type Props = {
   startWeek: number;
-  locale: string | 'enUS' | 'bg' | 'ro' | 'de';
+  locale: 'enUS' | 'bg' | 'ro' | 'de';
 };
 
 const locales = { enUS, bg, ro, de };
@@ -89,7 +89,7 @@ const WeeklyCalendar: React.FC<Props> = ({ startWeek, locale }) => {
               }
             `}
           >
-            {format(date, 'EEE, MMM d', { locale: locales[locale] || enUS })}
+            {format(date, 'EEE, MMM d', { locale: locales[locale] })}
           </div>
         ))}
       </div>

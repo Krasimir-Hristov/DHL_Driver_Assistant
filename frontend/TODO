@@ -19,3 +19,17 @@
 10. Count the Exactly days of work, days off, and days of sickeness, in the last 12 months.
 
 .....
+
+<!-- The 9 weaks with they daysoff -->
+
+const cycle = [
+{ week: 1, daysOff: [6] }, // Week 1 - Saturday
+{ week: 2, daysOff: [1, 2] }, // Week 2 - Monday, Tuesday
+{ week: 3, daysOff: [3] }, // Week 3 - Wednesday
+{ week: 4, daysOff: [1] }, // Week 4 - Monday
+{ week: 5, daysOff: [4] }, // Week 5 - Thursday
+{ week: 6, daysOff: [5, 6] }, // Week 6 - Friday, Saturday
+{ week: 7, daysOff: [1] }, // Week 7 - Monday
+{ week: 8, daysOff: [6] }, // Week 8 - Saturday
+{ week: 9, daysOff: [1] }, // Week 9 - Monday
+];

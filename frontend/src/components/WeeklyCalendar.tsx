@@ -15,7 +15,18 @@ import { weekOffDays } from '../constants/index';
 
 type Props = {
   startWeek: number;
-  locale: 'enUS' | 'bg' | 'ro' | 'de' | 'ru' | 'tr' | 'it' | 'hu' | 'gr' | 'al';
+  locale:
+    | string
+    | 'enUS'
+    | 'bg'
+    | 'ro'
+    | 'de'
+    | 'ru'
+    | 'tr'
+    | 'it'
+    | 'hu'
+    | 'gr'
+    | 'al';
 };
 
 const locales = { enUS, bg, ro, de, ru, tr, it, hu, el, sq };

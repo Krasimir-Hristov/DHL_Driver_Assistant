@@ -8,16 +8,29 @@ import {
   startOfMonth,
   endOfMonth,
   isSameMonth,
+  getDay,
 } from 'date-fns';
-import { enUS, bg, ro, de } from 'date-fns/locale';
+import { enUS, bg, ro, de, ru, tr, it, hu, el, sq } from 'date-fns/locale';
 import { weekOffDays } from '../constants/index';
 
 type Props = {
   startWeek: number;
-  locale: 'enUS' | 'bg' | 'ro' | 'de';
+  locale: 'enUS' | 'bg' | 'ro' | 'de' | 'ru' | 'tr' | 'it' | 'hu' | 'gr' | 'sq';
 };
 
-const locales = { enUS, bg, ro, de };
+const locales = { enUS, bg, ro, de, ru, tr, it, hu, el, sq };
+const i18nToLocaleMap = {
+  enUS: 'enUS',
+  bg: 'bg',
+  ro: 'ro',
+  de: 'de',
+  ru: 'ru',
+  tr: 'tr',
+  it: 'it',
+  hu: 'hu',
+  gr: 'el',
+  al: 'sq',
+};
 
 const WeeklyCalendar: React.FC<Props> = ({ startWeek, locale }) => {
   const [currentMonth, setCurrentMonth] = useState(new Date());
@@ -34,9 +47,10 @@ const WeeklyCalendar: React.FC<Props> = ({ startWeek, locale }) => {
       const offDays: number[] = weekOffDays[weekNumber];
       const weekDates = Array.from({ length: 7 }, (_, index) => {
         const date = addDays(currentDate, index);
-        const dayOfWeek = index + 1;
-        const isOffDay = offDays.includes(dayOfWeek);
-        const isSunday = dayOfWeek === 7;
+        const dayOfWeek = getDay(date);
+        const adjustedDayOfWeek = dayOfWeek === 0 ? 7 : dayOfWeek; // Adjust Sunday to 7
+        const isOffDay = offDays.includes(adjustedDayOfWeek);
+        const isSunday = adjustedDayOfWeek === 7;
         return { date, isOffDay, isSunday };
       });
       dates.push(...weekDates);
@@ -66,7 +80,9 @@ const WeeklyCalendar: React.FC<Props> = ({ startWeek, locale }) => {
           Предишен
         </button>
         <h2 className='text-lg font-bold'>
-          {format(currentMonth, 'MMMM yyyy', { locale: locales[locale] })}
+          {format(currentMonth, 'MMMM yyyy', {
+            locale: locales[i18nToLocaleMap[locale]],
+          })}
         </h2>
         <button
           onClick={handleNextMonth}
@@ -89,7 +105,9 @@ const WeeklyCalendar: React.FC<Props> = ({ startWeek, locale }) => {
               }
             `}
           >
-            {format(date, 'EEE, MMM d', { locale: locales[locale] })}
+            {format(date, 'EEE, MMM d', {
+              locale: locales[i18nToLocaleMap[locale]],
+            })}
           </div>
         ))}
       </div>

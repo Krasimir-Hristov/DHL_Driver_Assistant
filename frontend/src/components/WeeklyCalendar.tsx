@@ -15,11 +15,11 @@ import { weekOffDays } from '../constants/index';
 
 type Props = {
   startWeek: number;
-  locale: 'enUS' | 'bg' | 'ro' | 'de' | 'ru' | 'tr' | 'it' | 'hu' | 'gr' | 'sq';
+  locale: 'enUS' | 'bg' | 'ro' | 'de' | 'ru' | 'tr' | 'it' | 'hu' | 'gr' | 'al';
 };
 
 const locales = { enUS, bg, ro, de, ru, tr, it, hu, el, sq };
-const i18nToLocaleMap = {
+const i18nToLocaleMap: Record<Props['locale'], keyof typeof locales> = {
   enUS: 'enUS',
   bg: 'bg',
   ro: 'ro',
@@ -28,7 +28,7 @@ const i18nToLocaleMap = {
   tr: 'tr',
   it: 'it',
   hu: 'hu',
-  gr: 'el',
+  gr: 'el', // променено от 'gr' на 'el', тъй като 'gr' няма в date-fns
   al: 'sq',
 };
 

@@ -9,9 +9,11 @@ const App = () => {
     <I18nextProvider i18n={i18n}>
       <Router>
         <Navbar />
-        <Routes>
-          <Route path='/' element={<Home />} />
-        </Routes>
+        <div className='pt-32 md:pt-28'>
+          <Routes>
+            <Route path='/' element={<Home />} />
+          </Routes>
+        </div>
       </Router>
     </I18nextProvider>
   );

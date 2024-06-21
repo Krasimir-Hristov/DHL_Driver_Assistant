@@ -7,11 +7,23 @@ import {
   subMonths,
   startOfMonth,
   endOfMonth,
-  isSameMonth,
   getDay,
+  differenceInCalendarWeeks,
 } from 'date-fns';
 import { enUS, bg, ro, de, ru, tr, it, hu, el, sq } from 'date-fns/locale';
-import { weekOffDays } from '../constants/index';
+
+const weekOffDays = [
+  [], // Placeholder for 0 index
+  [6], // Week 1: Saturday
+  [1, 2], // Week 2: Monday, Tuesday
+  [3], // Week 3: Wednesday
+  [1], // Week 4: Monday
+  [4], // Week 5: Thursday
+  [5, 6], // Week 6: Friday, Saturday
+  [1], // Week 7: Monday
+  [6], // Week 8: Saturday
+  [1], // Week 9: Monday
+];
 
 type Props = {
   startWeek: number;
@@ -39,36 +51,48 @@ const i18nToLocaleMap: Record<Props['locale'], keyof typeof locales> = {
   tr: 'tr',
   it: 'it',
   hu: 'hu',
-  gr: 'el', // променено от 'gr' на 'el', тъй като 'gr' няма в date-fns
+  gr: 'el',
   al: 'sq',
 };
 
 const WeeklyCalendar: React.FC<Props> = ({ startWeek, locale }) => {
   const [currentMonth, setCurrentMonth] = useState(new Date());
 
+  const calculateWeekNumber = (
+    startWeek: number,
+    currentDate: Date,
+    baseDate: Date
+  ) => {
+    const totalWeeks = differenceInCalendarWeeks(currentDate, baseDate, {
+      weekStartsOn: 1,
+    });
+    return ((startWeek - 1 + totalWeeks) % 9) + 1;
+  };
+
   const generateDates = (startWeek: number, currentMonth: Date) => {
+    const baseDate = new Date(2022, 0, 1); // 1st January 2022
     const start = startOfWeek(startOfMonth(currentMonth), { weekStartsOn: 1 });
     const end = endOfMonth(currentMonth);
     const dates = [];
     let currentDate = start;
 
     while (currentDate <= end) {
-      const weekNumber: number =
-        ((startWeek + Math.floor(dates.length / 7) - 1) % 9) + 1;
-      const offDays: number[] = weekOffDays[weekNumber];
-      const weekDates = Array.from({ length: 7 }, (_, index) => {
-        const date = addDays(currentDate, index);
-        const dayOfWeek = getDay(date);
-        const adjustedDayOfWeek = dayOfWeek === 0 ? 7 : dayOfWeek; // Adjust Sunday to 7
-        const isOffDay = offDays.includes(adjustedDayOfWeek);
-        const isSunday = adjustedDayOfWeek === 7;
-        return { date, isOffDay, isSunday };
+      const weekNumber = calculateWeekNumber(startWeek, currentDate, baseDate);
+      const dayOfWeek = getDay(currentDate);
+      const offDays = weekOffDays[weekNumber] || [];
+      const isOffDay = offDays.includes(dayOfWeek);
+      const isSunday = dayOfWeek === 0; // Check if it's Sunday
+
+      dates.push({
+        date: currentDate,
+        isOffDay,
+        isSunday, // Add this property to the object
       });
-      dates.push(...weekDates);
-      currentDate = addDays(currentDate, 7);
+
+      currentDate = addDays(currentDate, 1);
     }
 
-    return dates.filter(({ date }) => isSameMonth(date, currentMonth));
+    return dates;
   };
 
   const dates = generateDates(startWeek, currentMonth);
@@ -111,7 +135,7 @@ const WeeklyCalendar: React.FC<Props> = ({ startWeek, locale }) => {
                 isOffDay
                   ? 'bg-green-500'
                   : isSunday
-                  ? 'bg-gray-500'
+                  ? 'bg-gray-500' // If it's Sunday, make it gray
                   : 'bg-yellow-500'
               }
             `}

@@ -18,6 +18,10 @@ const Home: React.FC = () => {
       <CurrentDate />
       <DateRange />
       <div className='mt-5'>
+        <h1 className='font-bold text-2xl md:text-4xl'>
+          {' '}
+          Check when you are day off
+        </h1>
         <h2 className='text-xl font-bold'>Chose your group</h2>
         <div className='flex flex-row justify-center items-center mt-4 gap-3 md:gap-5 font-semibold'>
           {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((week) => (

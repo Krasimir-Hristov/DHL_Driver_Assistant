@@ -20,9 +20,9 @@ const Home: React.FC = () => {
       <div className='mt-5 border-black p-2 border-8'>
         <h1 className='font-bold text-2xl md:text-4xl border-b-4 border-red-500 pb-2'>
           {' '}
-          Check when you are day off
+          {t('checkDayOff')}
         </h1>
-        <h2 className='text-xl font-bold mt-5  '>Chose your group</h2>
+        <h2 className='text-xl font-bold mt-5  '>{t('choseGroup')}</h2>
         <div className='flex flex-row p-3 justify-center items-center mt-4 gap-3 border-b-4 border-yellow-500  md:gap-5 font-semibold'>
           {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((week) => (
             <p

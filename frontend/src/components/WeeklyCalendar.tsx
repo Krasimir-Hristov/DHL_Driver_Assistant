@@ -58,7 +58,7 @@ const i18nToLocaleMap: Record<Props['locale'], keyof typeof locales> = {
 };
 
 const WeeklyCalendar: React.FC<Props> = ({ startWeek, locale }) => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const [currentMonth, setCurrentMonth] = useState(new Date());
 

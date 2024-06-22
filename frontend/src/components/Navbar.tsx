@@ -1,88 +1,68 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FlagIcon } from 'react-flag-kit';
 import { useTranslation } from 'react-i18next';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const Navbar: React.FC = () => {
   const { t, i18n } = useTranslation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
+    setIsMenuOpen(false); // Close the menu after language change
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
     <nav className='fixed w-full top-0 bg-yellow-500 p-2 md:p-4 z-50'>
-      <div className='container mx-auto flex flex-col md:flex-row justify-between items-center'>
-        <Link to='/' className='text-red-700 text-4xl font-bold mb-4 md:mb-0'>
-          <div className='flex gap-5'>
-            <p>{t('title')}</p>
-            <p className='text-black font-extrabold '>{t('indicator')}</p>
+      <div className='container mx-auto flex justify-between items-center'>
+        <Link to='/' className='text-red-700 text-2xl font-bold'>
+          <div className='flex gap-2 items-center'>
+            <p>DHL Driver Assistant</p>
+            <p className='text-black font-extrabold'>{t('indicator')}</p>
           </div>
         </Link>
-        <div className='flex flex-col md:flex-row'>
-          <div className='flex flex-nowrap justify-center md:justify-start'>
-            <button
-              onClick={() => changeLanguage('en')}
-              className='text-black hover:text-white mx-2'
-            >
-              <FlagIcon code='GB' size={24} />
-            </button>
-            <button
-              onClick={() => changeLanguage('bg')}
-              className='text-black hover:text-white mx-2'
-            >
-              <FlagIcon code='BG' size={24} />
-            </button>
-            <button
-              onClick={() => changeLanguage('ro')}
-              className='text-black hover:text-white mx-2'
-            >
-              <FlagIcon code='RO' size={24} />
-            </button>
-            <button
-              onClick={() => changeLanguage('de')}
-              className='text-black hover:text-white mx-2'
-            >
-              <FlagIcon code='DE' size={24} />
-            </button>
-            <button
-              onClick={() => changeLanguage('al')}
-              className='text-black hover:text-white mx-2'
-            >
-              <FlagIcon code='AL' size={24} />
-            </button>
-            <button
-              onClick={() => changeLanguage('gr')}
-              className='text-black hover:text-white mx-2'
-            >
-              <FlagIcon code='GR' size={24} />
-            </button>
-            <button
-              onClick={() => changeLanguage('it')}
-              className='text-black hover:text-white mx-2'
-            >
-              <FlagIcon code='IT' size={24} />
-            </button>
-            <button
-              onClick={() => changeLanguage('tr')}
-              className='text-black hover:text-white mx-2'
-            >
-              <FlagIcon code='TR' size={24} />
-            </button>
-            <button
-              onClick={() => changeLanguage('ru')}
-              className='text-black hover:text-white mx-2'
-            >
-              <FlagIcon code='RS' size={24} />
-            </button>
-            <button
-              onClick={() => changeLanguage('hu')}
-              className='text-black hover:text-white mx-2'
-            >
-              <FlagIcon code='HU' size={24} />
-            </button>
+        <div className='md:hidden'>
+          <button onClick={toggleMenu} className='text-black'>
+            {isMenuOpen ? (
+              <XMarkIcon className='w-6 h-6' />
+            ) : (
+              <Bars3Icon className='w-6 h-6' />
+            )}
+          </button>
+        </div>
+        <div
+          className={`flex-col md:flex-row md:flex ${
+            isMenuOpen ? 'flex' : 'hidden'
+          } md:flex md:items-center`}
+        >
+          <div className='flex flex-wrap justify-center md:justify-start'>
+            {[
+              { code: 'GB', lang: 'en' },
+              { code: 'BG', lang: 'bg' },
+              { code: 'RO', lang: 'ro' },
+              { code: 'DE', lang: 'de' },
+              { code: 'AL', lang: 'al' },
+              { code: 'GR', lang: 'gr' },
+              { code: 'IT', lang: 'it' },
+              { code: 'TR', lang: 'tr' },
+              { code: 'RS', lang: 'ru' },
+              { code: 'HU', lang: 'hu' },
+            ].map(({ code, lang }) => (
+              <button
+                key={lang}
+                onClick={() => changeLanguage(lang)}
+                className='text-black hover:text-white mx-1 my-1 md:my-0'
+              >
+                <FlagIcon code={code as any} size={24} />
+              </button>
+            ))}
           </div>
-          <div className='flex justify-center md:justify-start mt-8 md:mt-0'>
+          {/* <div className='flex flex-col md:flex-row justify-center md:justify-start mt-4 md:mt-0'>
             <Link
               to='/login'
               className='text-black hover:text-white mx-2 font-bold'
@@ -95,7 +75,7 @@ const Navbar: React.FC = () => {
             >
               {t('register')}
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </nav>

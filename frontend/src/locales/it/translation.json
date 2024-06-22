@@ -2,9 +2,13 @@
   "indicator": "IT",
   "title": "Assistente del Conducente DHL",
   "login": "Accesso",
-  "register": "Registrazione",
+  "register": "Registrati",
   "controlBookInfo": "Informazioni aggiornate per il libro di controllo",
   "dayOfYear": "Giorno dell'anno",
   "currentDate": "Data corrente",
-  "datesNeeded": "Hai bisogno di queste date"
+  "datesNeeded": "Hai bisogno di queste date",
+  "checkDayOff": "Controlla i tuoi giorni di riposo",
+  "choseGroup": "Scegli il tuo gruppo",
+  "previous": "Precedente",
+  "next": "Successivo"
 }

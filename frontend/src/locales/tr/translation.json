@@ -1,10 +1,14 @@
 {
   "indicator": "TR",
-  "title": "DHL Sürücü Asistani",
-  "login": "Giriş Yap",
-  "register": "Kayit Ol",
+  "title": "DHL Sürücü Asistanı",
+  "login": "Giriş",
+  "register": "Kayıt Ol",
   "controlBookInfo": "Kontrol defteri için güncel bilgiler",
-  "dayOfYear": "Yilin günü",
+  "dayOfYear": "Yılın günü",
   "currentDate": "Mevcut tarih",
-  "datesNeeded": "Bu tarihlere ihtiyaciniz var"
+  "datesNeeded": "Bu tarihlere ihtiyacınız var",
+  "checkDayOff": "İzin günlerinizi kontrol edin",
+  "choseGroup": "Grubunuzu seçin",
+  "previous": "Önceki",
+  "next": "Sonraki"
 }

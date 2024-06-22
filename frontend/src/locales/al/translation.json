@@ -6,5 +6,9 @@
   "controlBookInfo": "Informacion i përditësuar për librin e kontrollit",
   "dayOfYear": "Dita e vitit",
   "currentDate": "Data aktuale",
-  "datesNeeded": "Ju duhen këto data"
+  "datesNeeded": "Ju duhen këto data",
+  "checkDayOff": "Kontrolloni ditët tuaja të pushimit",
+  "choseGroup": "Zgjidhni grupin tuaj",
+  "previous": "E mëparshme",
+  "next": "Tjetër"
 }

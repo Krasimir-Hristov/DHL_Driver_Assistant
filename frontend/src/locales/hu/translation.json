@@ -6,5 +6,9 @@
   "controlBookInfo": "Aktuális információk az ellenőrző könyvről",
   "dayOfYear": "Az év napja",
   "currentDate": "Aktuális dátum",
-  "datesNeeded": "Szükséged van ezekre a dátumokra"
+  "datesNeeded": "Szükséged van ezekre a dátumokra",
+  "checkDayOff": "Ellenőrizze a szabadnapjait",
+  "choseGroup": "Válassza ki a csoportját",
+  "previous": "Előző",
+  "next": "Következő"
 }

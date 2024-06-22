@@ -6,5 +6,9 @@
   "controlBookInfo": "Informații actualizate despre cartea de control",
   "dayOfYear": "Ziua anului",
   "currentDate": "Data curentă",
-  "datesNeeded": "Aveți nevoie de aceste date"
+  "datesNeeded": "Aveți nevoie de aceste date",
+  "checkDayOff": "Verificați zilele libere",
+  "choseGroup": "Alegeți grupul dvs.",
+  "previous": "Anterior",
+  "next": "Următor"
 }

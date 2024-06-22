@@ -106,7 +106,7 @@ const WeeklyCalendar: React.FC<Props> = ({ startWeek, locale }) => {
   };
 
   return (
-    <div className='max-w-md mx-auto p-4'>
+    <div className='max-w-md mx-auto p-4 '>
       <div className='flex justify-between mb-4'>
         <button
           onClick={handlePreviousMonth}

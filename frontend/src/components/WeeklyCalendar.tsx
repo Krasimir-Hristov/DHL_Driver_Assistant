@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+
 import {
   format,
   addDays,
@@ -56,6 +58,8 @@ const i18nToLocaleMap: Record<Props['locale'], keyof typeof locales> = {
 };
 
 const WeeklyCalendar: React.FC<Props> = ({ startWeek, locale }) => {
+  const { t, i18n } = useTranslation();
+
   const [currentMonth, setCurrentMonth] = useState(new Date());
 
   const calculateWeekNumber = (
@@ -110,9 +114,9 @@ const WeeklyCalendar: React.FC<Props> = ({ startWeek, locale }) => {
       <div className='flex justify-between mb-4'>
         <button
           onClick={handlePreviousMonth}
-          className='p-2 bg-blue-500 text-white rounded'
+          className='p-2 bg-blue-500 w-24 text-white rounded'
         >
-          Предишен
+          {t('previous')}
         </button>
         <h2 className='text-lg font-bold'>
           {format(currentMonth, 'MMMM yyyy', {
@@ -121,9 +125,9 @@ const WeeklyCalendar: React.FC<Props> = ({ startWeek, locale }) => {
         </h2>
         <button
           onClick={handleNextMonth}
-          className='p-2 bg-blue-500 text-white rounded'
+          className='p-1 ml-1 w-24 bg-blue-500 text-white rounded'
         >
-          Следващ
+          {t('next')}
         </button>
       </div>
       <div className='grid grid-cols-7 gap-1 sm:gap-2'>

@@ -13,9 +13,15 @@ const Footer: React.FC = () => {
             <p className='text-black font-extrabold'>{t('indicator')}</p>
           </div>
         </Link>
-        <p className='text-black font-bold text-lg mt-2 md:mt-0'>
-          Created by: KRASIMIR HRISTOV
-        </p>
+        <a
+          href='https://www.krasimirxristov.com/'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='text-black font-bold text-lg mt-2 md:mt-0'
+        >
+          {t('createdByAndSupported')}{' '}
+          <span className='underline'>KRASIMIR HRISTOV</span>
+        </a>
       </div>
     </footer>
   );

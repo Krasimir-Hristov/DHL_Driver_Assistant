@@ -5,6 +5,11 @@ import i18n from './i18n';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Footer from './components/Footer';
+import ControllBook from './pages/ControllBook';
+import DayOffCalendar from './pages/DayOffCalendar';
+import Barcodes from './pages/Barcodes';
+import ImportantPhones from './pages/ImportantPhones';
+import PhonesDetails from './components/PhonesDetails';
 
 const App: React.FC = () => {
   return (
@@ -12,9 +17,15 @@ const App: React.FC = () => {
       <Router>
         <div className='flex flex-col min-h-screen'>
           <Navbar />
-          <main className='flex-grow pt-32 md:pt-28 mb-4'>
+          {/* Increase padding top for different screen sizes even more */}
+          <main className='flex-grow mb-4 pt-24 md:pt-28 '>
             <Routes>
               <Route path='/' element={<Home />} />
+              <Route path='/controllbook' element={<ControllBook />} />
+              <Route path='/barcodes' element={<Barcodes />} />
+              <Route path='/calendar' element={<DayOffCalendar />} />
+              <Route path='/phones' element={<ImportantPhones />} />
+              <Route path='phones/id' element={<PhonesDetails />} />
             </Routes>
           </main>
           <Footer />

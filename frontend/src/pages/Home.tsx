@@ -1,46 +1,25 @@
-import React, { useState } from 'react';
-import DayOfYear from '../components/DayOfYear';
-import CurrentDate from '../components/CurrentDate';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
-import DateRange from '../components/DateRange';
-import WeeklyCalendar from '../components/WeeklyCalendar';
 
 const Home: React.FC = () => {
-  const { t, i18n } = useTranslation();
-  const [startWeek, setStartWeek] = useState<number>(1); // Използваме 1 като стойност по подразбиране
+  const { t } = useTranslation();
 
   return (
-    <div className='flex flex-col items-center justify-center min-h-screen text-center px-4 pt-12 md:pt-0 bg-slate-200'>
-      <h1 className='text-3xl md:text-4xl lg:text-6xl mb-8 font-bold'>
-        {t('controlBookInfo')}
-      </h1>
-      <DayOfYear />
-      <CurrentDate />
-      <DateRange />
-      <div className='mt-5 border-black p-2 border-8'>
-        <h1 className='font-bold text-2xl md:text-4xl border-b-4 border-red-500 pb-2'>
-          {' '}
-          {t('checkDayOff')}
+    <>
+      <div className='py-12 px-6 md:px-24'>
+        <h1 className='text-4xl text-red-800 uppercase md:text-6xl font-extrabold text-center mb-6'>
+          {t('greeding')}
         </h1>
-        <h2 className='text-xl font-bold mt-5  '>{t('choseGroup')}</h2>
-        <div className='flex flex-row p-3 justify-center items-center mt-4 gap-3 border-b-4 border-yellow-500  md:gap-5 font-semibold'>
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((week) => (
-            <p
-              key={week}
-              onClick={() => setStartWeek(week)}
-              className={`p-1 md:p-2 border-2 border-black rounded-md cursor-pointer ${
-                startWeek === week ? 'bg-green-500' : 'bg-white'
-              }`}
-              style={{ minWidth: '1.5rem', textAlign: 'center' }}
-            >
-              {week}
-            </p>
-          ))}
-        </div>
+        <h2 className='text-xl md:text-3xl font-bold py-6 text-center mb-8'>
+          {t('wellcome')}
+        </h2>
+        <p className='text-lg md:text-xl font-bold py-6 '>{t('homeDesc')}</p>
 
-        <WeeklyCalendar startWeek={startWeek} locale={i18n.language} />
+        <p className='text-4xl font-extrabold text-red-800 mt-12 text-center'>
+          {t('homeEnd')}
+        </p>
       </div>
-    </div>
+    </>
   );
 };
 
